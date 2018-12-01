@@ -10,13 +10,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 
 import { AppComponent } from './app.component';
-import { WarningAlertComponent } from './warning-alert/warning-alert.component';
-import { SuccessAlertComponent } from './success-alert/success-alert.component';
 
 @NgModule({
   // A module is used to bundle components together
   // NgModule decorator marks the class as a module for the compiler
-  declarations: [AppComponent, WarningAlertComponent, SuccessAlertComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     FormsModule,
