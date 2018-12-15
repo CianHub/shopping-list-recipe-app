@@ -12,9 +12,5 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {}
 
-  public getLink = link => {
-    link.text === 'Recipes'
-      ? this.showComponent.emit(link.text)
-      : this.showComponent.emit(link.text);
-  }
+  public getLink = link => this.showComponent.emit(link.text);
 }
