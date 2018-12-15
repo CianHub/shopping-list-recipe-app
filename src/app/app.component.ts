@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   /* The tag that corresponds to this component in a HTML file, works like a CSS selector
@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html', // The HTML code for this component
   styleUrls: ['./app.component.scss'] // The styles for the HTML template for this component
 })
-export class AppComponent {}
+export class AppComponent {
+  showComponent = 'Recipes';
+
+  public whichComponent = (showComponent: string) =>
+    (this.showComponent = showComponent)
+}
