@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   /* The tag that corresponds to this component in a HTML file, works like a CSS selector
