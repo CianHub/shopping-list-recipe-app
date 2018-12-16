@@ -17,6 +17,7 @@ import { ShoppingListEditComponent } from './modules//shopping-list/shopping-lis
 import { RecipeListComponent } from './modules/recipe-book/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './modules/recipe-book/recipe-list/recipe-item/recipe-item.component';
 import { RecipeDetailComponent } from './modules/recipe-book/recipe-detail/recipe-detail.component';
+import { DropdownDirective } from './shared/dropdown-menu/dropdown.directive';
 
 @NgModule({
   // A module is used to bundle components together
@@ -29,7 +30,8 @@ import { RecipeDetailComponent } from './modules/recipe-book/recipe-detail/recip
     ShoppingListEditComponent,
     RecipeListComponent,
     RecipeItemComponent,
-    RecipeDetailComponent
+    RecipeDetailComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
