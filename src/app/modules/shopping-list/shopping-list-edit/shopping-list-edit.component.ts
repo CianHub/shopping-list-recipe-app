@@ -3,10 +3,10 @@ import {
   OnInit,
   ViewChild,
   ElementRef,
-  Output,
   EventEmitter
 } from '@angular/core';
 import { Ingredient } from 'src/app/shared/ingredient.model';
+import { ShoppingListService } from 'src/app/services/shopping-list-service/shopping-list.service';
 
 @Component({
   selector: 'app-shopping-list-edit',
@@ -14,19 +14,16 @@ import { Ingredient } from 'src/app/shared/ingredient.model';
   styleUrls: ['./shopping-list-edit.component.scss']
 })
 export class ShoppingListEditComponent implements OnInit {
-  newIngredient: Ingredient;
-
-  @Output() ingredient = new EventEmitter<Ingredient>();
-
   @ViewChild('nameInput') nameInput: ElementRef;
   @ViewChild('amountInput') amountInput: ElementRef;
 
-  constructor() {}
+  constructor(private shoppingService: ShoppingListService) {}
 
   ngOnInit() {}
 
   public addIngredient = () =>
-    this.ingredient.emit(
+    // Make the new ingredient accessible to every component with access to the service
+    this.shoppingService.ingredient.emit(
       new Ingredient(
         this.nameInput.nativeElement.value,
         this.amountInput.nativeElement.value
