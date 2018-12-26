@@ -18,6 +18,7 @@ import { RecipeListComponent } from './modules/recipe-book/recipe-list/recipe-li
 import { RecipeItemComponent } from './modules/recipe-book/recipe-list/recipe-item/recipe-item.component';
 import { RecipeDetailComponent } from './modules/recipe-book/recipe-detail/recipe-detail.component';
 import { DropdownDirective } from './shared/dropdown-menu/dropdown.directive';
+import { ShoppingListService } from './services/shopping-list-service/shopping-list.service';
 
 @NgModule({
   // A module is used to bundle components together
@@ -40,7 +41,7 @@ import { DropdownDirective } from './shared/dropdown-menu/dropdown.directive';
     BrowserAnimationsModule,
     AngularMaterialModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
