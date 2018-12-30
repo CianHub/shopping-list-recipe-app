@@ -6,17 +6,16 @@ import { Ingredient } from 'src/app/shared/ingredient.model';
   providedIn: 'root'
 })
 export class RecipeBookService {
-  // This property will emit the Recipe object assigned to it
-  selectedRecipe = new EventEmitter<Recipe>();
-
   private recipes: Recipe[] = [
     new Recipe(
+      1,
       'A test Recipe',
       'This is just a test',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Pug_-_1_year_Old.jpg/1200px-Pug_-_1_year_Old.jpg',
       [new Ingredient('Pug', 1), new Ingredient('Buns', 5)]
     ),
     new Recipe(
+      2,
       'Another test Recipe',
       'This is just a test',
       'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Pug_-_1_year_Old.jpg/1200px-Pug_-_1_year_Old.jpg',
@@ -26,6 +25,8 @@ export class RecipeBookService {
 
   // Create a copy of the recipes array
   public getRecipes = () => this.recipes.slice();
+
+  public getRecipe = id => this.recipes.filter(recipe => recipe.id === id);
 
   constructor() {}
 }

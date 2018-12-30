@@ -19,6 +19,8 @@ import { RecipeItemComponent } from './modules/recipe-book/recipe-list/recipe-it
 import { RecipeDetailComponent } from './modules/recipe-book/recipe-detail/recipe-detail.component';
 import { DropdownDirective } from './shared/dropdown-menu/dropdown.directive';
 import { ShoppingListService } from './services/shopping-list-service/shopping-list.service';
+import { AppRoutingModule } from './app-routing.module';
+import { RecipeInstructionComponent } from './modules/recipe-book/recipe-instruction/recipe-instruction.component';
 
 @NgModule({
   // A module is used to bundle components together
@@ -32,14 +34,16 @@ import { ShoppingListService } from './services/shopping-list-service/shopping-l
     RecipeListComponent,
     RecipeItemComponent,
     RecipeDetailComponent,
-    DropdownDirective
+    DropdownDirective,
+    RecipeInstructionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    AppRoutingModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]

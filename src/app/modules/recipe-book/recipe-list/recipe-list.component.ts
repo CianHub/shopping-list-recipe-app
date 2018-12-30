@@ -17,11 +17,4 @@ export class RecipeListComponent implements OnInit {
     // Get Recipes from the injected recipeService
     this.recipes = this.recipeService.getRecipes();
   }
-
-  public selectRecipe(recipe: Recipe) {
-    // Pass the selected recipe to the emitter in the service
-    // This can be subscribed to by any of the components provided with this service
-    // This way the selected recipe can be accessed from any of these
-    this.recipeService.selectedRecipe.emit(recipe);
-  }
 }
