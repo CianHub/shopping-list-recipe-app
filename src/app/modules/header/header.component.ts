@@ -6,11 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @Output() showComponent = new EventEmitter<string>();
-
   constructor() {}
 
   ngOnInit() {}
-
-  public getLink = link => this.showComponent.emit(link.text);
 }
