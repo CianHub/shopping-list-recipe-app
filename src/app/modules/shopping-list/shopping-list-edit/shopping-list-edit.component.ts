@@ -23,7 +23,7 @@ export class ShoppingListEditComponent implements OnInit {
 
   public addIngredient = () =>
     // Make the new ingredient accessible to every component with access to the service
-    this.shoppingService.ingredient.emit(
+    this.shoppingService.ingredient.next(
       new Ingredient(
         this.nameInput.nativeElement.value,
         this.amountInput.nativeElement.value

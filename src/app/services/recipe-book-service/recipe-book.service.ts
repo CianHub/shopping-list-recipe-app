@@ -1,4 +1,4 @@
-import { Injectable, EventEmitter } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Recipe } from 'src/app/modules/recipe-book/recipe.model';
 import { Ingredient } from 'src/app/shared/ingredient.model';
 
