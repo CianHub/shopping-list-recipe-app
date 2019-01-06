@@ -15,8 +15,6 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./shopping-list-edit.component.scss']
 })
 export class ShoppingListEditComponent implements OnInit {
-  @ViewChild('nameInput') nameInput: ElementRef;
-  @ViewChild('amountInput') amountInput: ElementRef;
 
   ingredientForm = this.fb.group({
     name: [null, Validators.required],

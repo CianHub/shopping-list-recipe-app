@@ -1,12 +1,16 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Recipe } from 'src/app/modules/recipe-book/recipe.model';
 import { Ingredient } from 'src/app/shared/ingredient.model';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RecipeBookService {
-  private recipes: Recipe[] = [
+export class RecipeBookService implements OnInit {
+  newRecipe = new Subject<Recipe>();
+  recipesTracker = new Subject<Recipe[]>();
+
+   recipes: Recipe[] = [
     new Recipe(
       1,
       'A test Recipe',
@@ -24,9 +28,11 @@ export class RecipeBookService {
   ];
 
   // Create a copy of the recipes array
-  public getRecipes = () => this.recipes.slice();
+  public getRecipes = () => this.recipesTracker.next(this.recipes);
 
   public getRecipe = id => this.recipes.filter(recipe => recipe.id === id);
 
   constructor() {}
+
+  ngOnInit() {}
 }
