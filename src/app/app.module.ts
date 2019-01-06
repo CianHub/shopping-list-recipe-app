@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 // Angular Material Animations
@@ -45,7 +45,8 @@ import { RecipeEditComponent } from './modules/recipe-book/recipe-edit/recipe-ed
     HttpClientModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]
