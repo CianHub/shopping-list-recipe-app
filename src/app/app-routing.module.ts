@@ -11,8 +11,7 @@ const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   {
     path: 'recipes',
-    loadChildren: './recipes/recipes.module#RecipesModule',
-    canLoad: [AuthGuard]
+    loadChildren: './recipes/recipes.module#RecipesModule'
   },
   { path: 'shopping-list', component: ShoppingListComponent },
   { path: 'signup', component: SignupComponent },
